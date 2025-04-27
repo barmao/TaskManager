@@ -31,8 +31,22 @@ ext {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Database
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'com.h2database:h2'
+
+	// ActiveMQ
+	implementation 'org.springframework.boot:spring-boot-starter-activemq'
+	implementation 'org.apache.activemq:activemq-broker'
+
+	implementation 'io.hawt:hawtio-springboot:4.4.0'
+	compileOnly 'io.hawt:hawtio-war:4.4.0'
+
+	// Lombok
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'

@@ -62,12 +62,12 @@ public class TaskServiceImpl implements TaskService{
 
     @Override
     public List<Task> getAllTasks() {
-        return null;
+        return taskRepository.findAll();
     }
 
     @Override
     public List<Task> getTasksByStatus(Task.TaskStatus status) {
-        return null;
+        return taskRepository.findByStatus(status);
     }
 
     // SCENARIO 2: Asynchronous task processing with thread tracking
